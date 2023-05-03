@@ -42,7 +42,8 @@ require_once './Models/Movie.php';
             $_SESSION['movies'] = $movies;
 
             // Output the movies
-            foreach ($_SESSION['movies'] as $movie) {
+            foreach ($_SESSION['movies'] as $index => $movie) {
+                echo "<h4>Movie " . $index + 1 . "</h4>";
                 $movie->printDetails();
             }
             ?>

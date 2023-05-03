@@ -18,14 +18,14 @@ class Movie
     public function printDetails()
     {
         // print the title
-        echo "<p>Title: " . $this->title . "</p>";
+        echo "<p><strong>Title: </strong>" . $this->title . "</p>";
 
         // print the element of the array of strings on the page
         echo "<p>";
         if (count($this->genres) == 1) {
-            echo "Genre: " . $this->genres[0];
+            echo "<strong>Genre: </strong>" . $this->genres[0];
         } else {
-            echo "Genres: ";
+            echo "<strong>Genres: </strong>";
             foreach ($this->genres as $key => $genre) {
                 if ($key == count($this->genres) - 1) {
                     echo $genre . ". ";
@@ -37,6 +37,6 @@ class Movie
         echo "</p>";
 
         // print the year
-        echo "<p>Year: " . $this->year . "</p>";
+        echo "<p><strong>Year: </strong>" . $this->year . "</p>";
     }
 }
