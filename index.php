@@ -1,6 +1,7 @@
 <?php
 
 require_once './Models/Movie.php';
+require_once './Models/MovieHTMLHelper.php';
 
 ?>
 <!doctype html>
@@ -44,7 +45,8 @@ require_once './Models/Movie.php';
             // Output the movies
             foreach ($_SESSION['movies'] as $index => $movie) {
                 echo "<h4>Movie " . $index + 1 . "</h4>";
-                $movie->printDetails();
+                // Output the movie details with HTML markup using MovieHTMLHelper
+                MovieHTMLHelper::printDetails($movie);
             }
             ?>
 
