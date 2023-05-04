@@ -24,5 +24,7 @@ class MovieHTMLHelper extends Movie
 
         // print the year
         echo "<p><strong>Year: </strong>" . $movie->year . "</p>";
+        // print the length 
+        echo "<p><strong>Length: </strong>" . MovieMinutesToHours::convertToHoursAndMinutes($movie->length) . "</p>";
     }
 }

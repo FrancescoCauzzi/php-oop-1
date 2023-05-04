@@ -2,6 +2,10 @@
 
 require_once './Models/Movie.php';
 require_once './Models/MovieHTMLHelper.php';
+require_once './Models/MovieMinutesToHours.php';
+
+
+
 
 ?>
 <!doctype html>
@@ -13,10 +17,26 @@ require_once './Models/MovieHTMLHelper.php';
     <title>Movies </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         footer {
             position: fixed;
             bottom: 0;
             width: 100%;
+            height: 56px;
+        }
+
+        nav {
+            height: 60px;
+        }
+
+        main {
+            height: calc(100vh - 116px);
+            background-color: #DCDCDC;
         }
     </style>
 
@@ -31,7 +51,7 @@ require_once './Models/MovieHTMLHelper.php';
     </header>
     <main>
 
-        <div class="container py-4">
+        <div class="container py-4 __my-ctn">
             <?php
             // Start the session
             session_start();

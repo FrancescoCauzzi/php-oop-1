@@ -11,13 +11,13 @@
                 // Get the current timestamp
                 $timestamp = time();
                 // Format the timestamp as a date string using the date() function
-                $date = date('Y-m-d', $timestamp);
+                //$date = date('Y-m-d', $timestamp);
                 // Get the current year
-                $year = date('Y');
+                $year = date('Y', $timestamp);
                 // Output the year string
                 echo $year;
 
-                ?> Boolean, Clasee #88</span>
+                ?> Boolean, Classe #88</span>
         </div>
 
     </div>
